@@ -1,34 +1,43 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Sidebar from './components/Sidebar'
+import HomePage from './pages/HomePage'
+import TransitionStagesPage from './pages/TransitionStagesPage'
+import SocialismCharacteristicsPage from './pages/SocialismCharacteristicsPage'
+import VietnamPracticePage from './pages/VietnamPracticePage'
+import QuizPage from './pages/QuizPage'
+import AIUsagePage from './pages/AIUsagePage'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [activePage, setActivePage] = useState('home')
+
+  const renderPage = () => {
+    switch (activePage) {
+      case 'home':
+        return <HomePage />
+      case 'transition-stages':
+        return <TransitionStagesPage />
+      case 'socialism-characteristics':
+        return <SocialismCharacteristicsPage />
+      case 'vietnam-practice':
+        return <VietnamPracticePage />
+      case 'quiz':
+        return <QuizPage />
+      case 'ai-usage':
+        return <AIUsagePage />
+      default:
+        return <HomePage />
+    }
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="flex min-h-screen bg-gray-50">
+      <Sidebar activePage={activePage} onPageChange={setActivePage} />
+      <main className="flex-1 overflow-auto">
+        <div className="bg-white min-h-screen">
+          {renderPage()}
+        </div>
+      </main>
+    </div>
   )
 }
 
