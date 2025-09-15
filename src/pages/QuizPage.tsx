@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface Question {
     id: number;
@@ -14,132 +14,213 @@ const QuizPage = () => {
     const [score, setScore] = useState(0);
     const [showResult, setShowResult] = useState(false);
     const [quizCompleted, setQuizCompleted] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    // Tạo âm thanh bằng Web Audio API
+    const createTone = (frequency: number, duration: number, type: OscillatorType = 'sine') => {
+        const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        
+        oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime);
+        oscillator.type = type;
+        
+        gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration);
+        
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + duration);
+    };
+
+    // Âm thanh khi chọn đúng
+    const playCorrectSound = () => {
+        createTone(523.25, 0.2); // C5
+        setTimeout(() => createTone(659.25, 0.2), 100); // E5
+        setTimeout(() => createTone(783.99, 0.3), 200); // G5
+    };
+
+    // Âm thanh khi chọn sai
+    const playWrongSound = () => {
+        createTone(200, 0.5, 'sawtooth'); // Âm trầm
+        setTimeout(() => createTone(150, 0.5, 'sawtooth'), 200);
+    };
+
+    // Âm thanh chuyển câu tiếp theo
+    const playNextQuestionSound = () => {
+        createTone(440, 0.1); // A4
+        setTimeout(() => createTone(554.37, 0.1), 50); // C#5
+        setTimeout(() => createTone(659.25, 0.2), 100); // E5
+    };
+
+    // Âm thanh hoàn thành quiz
+    const playCompletionSound = () => {
+        const notes = [523.25, 587.33, 659.25, 698.46, 783.99]; // C5, D5, E5, F5, G5
+        notes.forEach((note, index) => {
+            setTimeout(() => createTone(note, 0.3), index * 150);
+        });
+    };
+
+    // Nhạc nền (âm thanh nhẹ nhàng)
+    const playBackgroundMusic = () => {
+        if (isPlaying) return;
+        setIsPlaying(true);
+        
+        const playMelody = () => {
+            const melody = [261.63, 293.66, 329.63, 349.23, 392.00, 349.23, 329.63, 293.66]; // C4, D4, E4, F4, G4, F4, E4, D4
+            melody.forEach((note, index) => {
+                setTimeout(() => createTone(note, 0.5), index * 800);
+            });
+        };
+        
+        playMelody();
+        const interval = setInterval(playMelody, 8000); // Lặp lại mỗi 8 giây
+        
+        return () => clearInterval(interval);
+    };
+
+    // Khởi tạo âm thanh khi component mount
+    useEffect(() => {
+        // Âm thanh chào mừng khi bắt đầu quiz
+        setTimeout(() => {
+            createTone(523.25, 0.2); // C5
+            setTimeout(() => createTone(659.25, 0.2), 100); // E5
+            setTimeout(() => createTone(783.99, 0.3), 200); // G5
+        }, 500);
+        
+        const cleanup = playBackgroundMusic();
+        return cleanup;
+    }, []);
 
     const questions: Question[] = [
         {
             id: 1,
-            question: "Thời kỳ quá độ lên chủ nghĩa xã hội là giai đoạn:",
-            options: [
-                "Giữa chế độ phong kiến và tư bản chủ nghĩa",
-                "Chuyển tiếp từ tư bản chủ nghĩa lên xã hội chủ nghĩa",
-                "Giữa xã hội cộng sản nguyên thủy và chiếm hữu nô lệ",
-                "Giữa chủ nghĩa xã hội và chủ nghĩa cộng sản"
-            ],
-            correctAnswer: 1,
-            explanation: "Thời kỳ quá độ lên chủ nghĩa xã hội là giai đoạn chuyển tiếp từ tư bản chủ nghĩa lên xã hội chủ nghĩa, đây là quá trình lịch sử tự nhiên theo quy luật phát triển của xã hội."
-        },
-        {
-            id: 2,
             question: "Việt Nam lựa chọn con đường quá độ lên CNXH bỏ qua chế độ tư bản chủ nghĩa vì:",
             options: [
                 "Chủ nghĩa tư bản không tồn tại ở Việt Nam",
-                "Nguyện vọng của nhân dân và sự lãnh đạo của Đảng",
                 "Việt Nam có nền kinh tế phát triển cao từ trước",
+                "Nguyện vọng của nhân dân và sự lãnh đạo của Đảng",
                 "Do ảnh hưởng từ các nước xã hội chủ nghĩa"
             ],
-            correctAnswer: 1,
+            correctAnswer: 2,
             explanation: "Việt Nam lựa chọn con đường quá độ lên CNXH bỏ qua chế độ tư bản chủ nghĩa dựa trên nguyện vọng của nhân dân và sự lãnh đạo sáng suốt của Đảng Cộng sản Việt Nam."
+        },
+        {
+            id: 2,
+            question: "Thời kỳ quá độ lên chủ nghĩa xã hội là giai đoạn:",
+            options: [
+                "Chuyển tiếp từ tư bản chủ nghĩa lên xã hội chủ nghĩa",
+                "Giữa xã hội cộng sản nguyên thủy và chiếm hữu nô lệ",
+                "Giữa chủ nghĩa xã hội và chủ nghĩa cộng sản",
+                "Giữa chế độ phong kiến và tư bản chủ nghĩa"
+            ],
+            correctAnswer: 0,
+            explanation: "Thời kỳ quá độ lên chủ nghĩa xã hội là giai đoạn chuyển tiếp từ tư bản chủ nghĩa lên xã hội chủ nghĩa, đây là quá trình lịch sử tự nhiên theo quy luật phát triển của xã hội."
         },
         {
             id: 3,
             question: "Đại hội nào của Đảng Cộng sản Việt Nam khởi xướng công cuộc Đổi mới, mở ra giai đoạn quá độ mới?",
             options: [
-                "Đại hội IV (1976)",
-                "Đại hội VI (1986)",
                 "Đại hội VII (1991)",
-                "Đại hội XI (2011)"
+                "Đại hội XI (2011)",
+                "Đại hội IV (1976)",
+                "Đại hội VI (1986)"
             ],
-            correctAnswer: 1,
+            correctAnswer: 3,
             explanation: "Đại hội VI (1986) của Đảng Cộng sản Việt Nam đã khởi xướng công cuộc Đổi mới, mở ra giai đoạn quá độ mới với những đổi mới quan trọng về kinh tế và xã hội."
         },
         {
             id: 4,
-            question: "Đặc trưng cơ bản của CNXH được khẳng định trong Cương lĩnh 2011 là:",
+            question: "Giai đoạn 1976 – 1985 trong quá độ lên CNXH ở Việt Nam chủ yếu gặp khó khăn gì?",
             options: [
-                "Kinh tế tập trung quan liêu bao cấp",
-                "Nhân dân lao động làm chủ, công bằng xã hội",
-                "Kinh tế thị trường tự do tư bản chủ nghĩa",
-                "Nhà nước đa đảng, tam quyền phân lập"
+                "Chưa có sự lãnh đạo của Đảng Cộng sản",
+                "Việt Nam chưa gia nhập ASEAN",
+                "Chưa giành được độc lập dân tộc",
+                "Mô hình kinh tế tập trung quan liêu bao cấp bộc lộ nhiều hạn chế"
             ],
-            correctAnswer: 1,
-            explanation: "Đặc trưng cơ bản của CNXH được khẳng định trong Cương lĩnh 2011 là nhân dân lao động làm chủ và công bằng xã hội, thể hiện bản chất dân chủ và tiến bộ của chế độ xã hội chủ nghĩa."
+            correctAnswer: 3,
+            explanation: "Giai đoạn 1976-1985, mô hình kinh tế tập trung quan liêu bao cấp bộc lộ nhiều hạn chế, dẫn đến khủng hoảng kinh tế-xã hội, tạo tiền đề cho công cuộc Đổi mới."
         },
         {
             id: 5,
             question: "Đặc trưng 'Nhà nước pháp quyền XHCN của nhân dân, do nhân dân, vì nhân dân' có ý nghĩa là gì?",
             options: [
-                "Nhà nước tách rời xã hội",
+                "Nhà nước tư sản kiểu mới",
                 "Nhà nước hoạt động theo pháp luật, phục vụ nhân dân",
-                "Nhà nước do cá nhân lãnh đạo tuyệt đối",
-                "Nhà nước tư sản kiểu mới"
+                "Nhà nước tách rời xã hội",
+                "Nhà nước do cá nhân lãnh đạo tuyệt đối"
             ],
             correctAnswer: 1,
             explanation: "Đặc trưng này có ý nghĩa là nhà nước hoạt động theo pháp luật và phục vụ nhân dân, thể hiện tính dân chủ và pháp quyền của nhà nước xã hội chủ nghĩa."
         },
         {
             id: 6,
-            question: "Giai đoạn 1976 – 1985 trong quá độ lên CNXH ở Việt Nam chủ yếu gặp khó khăn gì?",
+            question: "Đặc trưng cơ bản của CNXH được khẳng định trong Cương lĩnh 2011 là:",
             options: [
-                "Chưa giành được độc lập dân tộc",
-                "Mô hình kinh tế tập trung quan liêu bao cấp bộc lộ nhiều hạn chế",
-                "Chưa có sự lãnh đạo của Đảng Cộng sản",
-                "Việt Nam chưa gia nhập ASEAN"
+                "Nhân dân lao động làm chủ, công bằng xã hội",
+                "Kinh tế tập trung quan liêu bao cấp",
+                "Nhà nước đa đảng, tam quyền phân lập",
+                "Kinh tế thị trường tự do tư bản chủ nghĩa"
             ],
-            correctAnswer: 1,
-            explanation: "Giai đoạn 1976-1985, mô hình kinh tế tập trung quan liêu bao cấp bộc lộ nhiều hạn chế, dẫn đến khủng hoảng kinh tế-xã hội, tạo tiền đề cho công cuộc Đổi mới."
+            correctAnswer: 0,
+            explanation: "Đặc trưng cơ bản của CNXH được khẳng định trong Cương lĩnh 2011 là nhân dân lao động làm chủ và công bằng xã hội, thể hiện bản chất dân chủ và tiến bộ của chế độ xã hội chủ nghĩa."
         },
         {
             id: 7,
             question: "Thách thức lớn nhất của Việt Nam trong quá trình quá độ hiện nay là:",
             options: [
-                "Phát triển văn hóa tiên tiến, đậm đà bản sắc dân tộc",
                 "Giữ vững vai trò lãnh đạo của Đảng",
-                "Kết hợp tăng trưởng kinh tế với công bằng xã hội",
-                "Quan hệ hữu nghị quốc tế"
+                "Phát triển văn hóa tiên tiến, đậm đà bản sắc dân tộc",
+                "Quan hệ hữu nghị quốc tế",
+                "Kết hợp tăng trưởng kinh tế với công bằng xã hội"
             ],
-            correctAnswer: 2,
+            correctAnswer: 3,
             explanation: "Thách thức lớn nhất hiện nay là kết hợp tăng trưởng kinh tế với công bằng xã hội, đảm bảo phát triển bền vững và công bằng trong quá trình quá độ lên CNXH."
         },
         {
             id: 8,
             question: "Tại sao công cuộc Đổi mới 1986 được coi là bước ngoặt trong quá độ lên CNXH ở Việt Nam?",
             options: [
-                "Đưa Việt Nam thành nước công nghiệp phát triển",
+                "Thực hiện đa nguyên chính trị",
                 "Xóa bỏ hoàn toàn kinh tế tư nhân",
-                "Chuyển sang mô hình kinh tế thị trường định hướng XHCN, giải quyết khủng hoảng kinh tế – xã hội",
-                "Thực hiện đa nguyên chính trị"
+                "Đưa Việt Nam thành nước công nghiệp phát triển",
+                "Chuyển sang mô hình kinh tế thị trường định hướng XHCN, giải quyết khủng hoảng kinh tế – xã hội"
             ],
-            correctAnswer: 2,
+            correctAnswer: 3,
             explanation: "Công cuộc Đổi mới 1986 là bước ngoặt vì đã chuyển sang mô hình kinh tế thị trường định hướng XHCN và giải quyết được khủng hoảng kinh tế-xã hội, mở ra thời kỳ phát triển mới."
         },
         {
             id: 9,
-            question: "Nếu không tiến hành Đổi mới 1986, con đường quá độ lên CNXH của Việt Nam có thể sẽ:",
-            options: [
-                "Phát triển nhanh hơn",
-                "Tiếp tục khủng hoảng, trì trệ, mất lòng tin của nhân dân",
-                "Gia nhập EU sớm hơn",
-                "Trở thành nước tư bản phát triển"
-            ],
-            correctAnswer: 1,
-            explanation: "Nếu không có Đổi mới 1986, Việt Nam sẽ tiếp tục khủng hoảng, trì trệ và mất lòng tin của nhân dân, không thể phát triển được theo định hướng xã hội chủ nghĩa."
-        },
-        {
-            id: 10,
             question: "Trong 8 đặc trưng của CNXH, đặc trưng nào được xem là khó đạt nhất hiện nay và vì sao?",
             options: [
                 "Nhân dân lao động làm chủ – do dân trí chưa cao",
-                "Nhà nước pháp quyền XHCN – do hệ thống luật pháp chưa hoàn thiện",
                 "Công bằng xã hội – do khoảng cách giàu nghèo và bất bình đẳng vùng miền",
-                "Quan hệ hữu nghị quốtế – do hội nhập toàn cầu"
+                "Quan hệ hữu nghị quốc tế – do hội nhập toàn cầu",
+                "Nhà nước pháp quyền XHCN – do hệ thống luật pháp chưa hoàn thiện"
             ],
-            correctAnswer: 2,
+            correctAnswer: 1,
             explanation: "Công bằng xã hội là đặc trưng khó đạt nhất hiện nay do khoảng cách giàu nghèo và bất bình đẳng vùng miền vẫn còn lớn, đòi hỏi nhiều nỗ lực và thời gian để giải quyết."
+        },
+        {
+            id: 10,
+            question: "Nếu không tiến hành Đổi mới 1986, con đường quá độ lên CNXH của Việt Nam có thể sẽ:",
+            options: [
+                "Phát triển nhanh hơn",
+                "Trở thành nước tư bản phát triển",
+                "Gia nhập EU sớm hơn",
+                "Tiếp tục khủng hoảng, trì trệ, mất lòng tin của nhân dân"
+            ],
+            correctAnswer: 3,
+            explanation: "Nếu không có Đổi mới 1986, Việt Nam sẽ tiếp tục khủng hoảng, trì trệ và mất lòng tin của nhân dân, không thể phát triển được theo định hướng xã hội chủ nghĩa."
         }
     ];
 
     const handleAnswerSelect = (answerIndex: number) => {
         setSelectedAnswer(answerIndex);
+        // Phát âm thanh khi chọn đáp án (âm thanh nhẹ)
+        createTone(440, 0.1); // A4
     };
 
     const handleNextQuestion = () => {
@@ -148,16 +229,24 @@ const QuizPage = () => {
         }
 
         if (currentQuestion < questions.length - 1) {
+            playNextQuestionSound();
             setCurrentQuestion(currentQuestion + 1);
             setSelectedAnswer(null);
             setShowResult(false);
         } else {
+            playCompletionSound();
             setQuizCompleted(true);
         }
     };
 
     const handleShowResult = () => {
         setShowResult(true);
+        // Phát âm thanh dựa trên kết quả
+        if (selectedAnswer === questions[currentQuestion].correctAnswer) {
+            playCorrectSound();
+        } else {
+            playWrongSound();
+        }
     };
 
     const resetQuiz = () => {
@@ -166,6 +255,11 @@ const QuizPage = () => {
         setScore(0);
         setShowResult(false);
         setQuizCompleted(false);
+        setIsPlaying(false);
+        // Phát âm thanh reset
+        createTone(261.63, 0.2); // C4
+        setTimeout(() => createTone(329.63, 0.2), 100); // E4
+        setTimeout(() => createTone(392.00, 0.3), 200); // G4
     };
 
     const getScoreMessage = () => {
@@ -192,7 +286,7 @@ const QuizPage = () => {
                         <p className="text-xl mb-6">{getScoreMessage()}</p>
                         <button
                             onClick={resetQuiz}
-                            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                            className="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors transform hover:scale-105 active:scale-95"
                         >
                             Làm lại Quiz
                         </button>
@@ -215,18 +309,35 @@ const QuizPage = () => {
                 {/* Header */}
                 <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white mb-8 shadow-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-down">
                     <h1 className="text-4xl font-bold mb-4">
-                        Quiz tương tác: Quá độ lên CNXH ở Việt Nam
+                        📘 Bộ 10 Câu Hỏi Trắc Nghiệm 
                     </h1>
                     <p className="text-xl opacity-90">
-                        Kiểm tra kiến thức của bạn về chủ đề này
+                        Kiểm tra kiến thức về Quá độ lên CNXH ở Việt Nam
                     </p>
+                    <div className="mt-4 text-sm opacity-80">
+                        <p>Mức độ: Dễ → Trung bình → Khó → Vận dụng cao</p>
+                    </div>
                     <div className="mt-4 flex items-center justify-between">
                         <span className="text-sm">Câu {currentQuestion + 1}/{questions.length}</span>
-                        <div className="w-32 bg-white/20 rounded-full h-2">
-                            <div
-                                className="bg-white h-2 rounded-full transition-all duration-300"
-                                style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
-                            ></div>
+                        <div className="flex items-center space-x-4">
+                            <button
+                                onClick={() => {
+                                    setIsPlaying(!isPlaying);
+                                    if (!isPlaying) {
+                                        playBackgroundMusic();
+                                    }
+                                }}
+                                className="text-white/80 hover:text-white transition-colors"
+                                title={isPlaying ? "Tắt nhạc nền" : "Bật nhạc nền"}
+                            >
+                                {isPlaying ? "🔊" : "🔇"}
+                            </button>
+                            <div className="w-32 bg-white/20 rounded-full h-2">
+                                <div
+                                    className="bg-white h-2 rounded-full transition-all duration-300"
+                                    style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
+                                ></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -243,14 +354,14 @@ const QuizPage = () => {
                                 key={index}
                                 onClick={() => handleAnswerSelect(index)}
                                 disabled={showResult}
-                                className={`w-full p-4 rounded-lg text-left transition-all duration-200 ${selectedAnswer === index
+                                className={`w-full p-4 rounded-lg text-left transition-all duration-200 transform hover:scale-105 active:scale-95 ${selectedAnswer === index
                                     ? showResult
                                         ? index === questions[currentQuestion].correctAnswer
-                                            ? 'bg-green-100 border-2 border-green-500 text-green-800'
-                                            : 'bg-red-100 border-2 border-red-500 text-red-800'
+                                            ? 'bg-green-100 border-2 border-green-500 text-green-800 animate-pulse'
+                                            : 'bg-red-100 border-2 border-red-500 text-red-800 animate-pulse'
                                         : 'bg-blue-100 border-2 border-blue-500 text-blue-800'
                                     : showResult && index === questions[currentQuestion].correctAnswer
-                                        ? 'bg-green-100 border-2 border-green-500 text-green-800'
+                                        ? 'bg-green-100 border-2 border-green-500 text-green-800 animate-pulse'
                                         : 'bg-gray-50 border-2 border-gray-200 hover:bg-gray-100 text-gray-700'
                                     }`}
                             >
@@ -266,7 +377,7 @@ const QuizPage = () => {
                         <div className="mt-6 text-center">
                             <button
                                 onClick={handleShowResult}
-                                className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                                className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors transform hover:scale-105 active:scale-95"
                             >
                                 Xem kết quả
                             </button>
@@ -285,7 +396,7 @@ const QuizPage = () => {
                             </p>
                             <button
                                 onClick={handleNextQuestion}
-                                className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                                className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors transform hover:scale-105 active:scale-95"
                             >
                                 {currentQuestion < questions.length - 1 ? "Câu tiếp theo" : "Xem kết quả cuối"}
                             </button>
@@ -295,11 +406,12 @@ const QuizPage = () => {
 
                 {/* Tips */}
                 <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-6 border border-yellow-200 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-3">Mẹo học tập:</h3>
+                    <h3 className="text-lg font-semibold text-gray-800 mb-3">💡 Mẹo học tập:</h3>
                     <ul className="space-y-2 text-gray-600">
-                        <li>• Đọc kỹ nội dung các trang trước khi làm quiz</li>
-                        <li>• Chú ý đến các giai đoạn và đặc trưng quan trọng</li>
-                        <li>• Liên hệ với thực tiễn Việt Nam để hiểu sâu hơn</li>
+                        <li>• <strong>Mức độ dễ:</strong> Nhận biết khái niệm cơ bản và giai đoạn lịch sử</li>
+                        <li>• <strong>Mức độ trung bình:</strong> Hiểu đặc trưng CNXH và thách thức quá độ</li>
+                        <li>• <strong>Mức độ khó:</strong> Phân tích ý nghĩa và tác động của Đổi mới 1986</li>
+                        <li>• <strong>Vận dụng cao:</strong> Đánh giá tình huống và phản biện</li>
                     </ul>
                 </div>
             </div>

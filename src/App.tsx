@@ -6,6 +6,7 @@ import SocialismCharacteristicsPage from './pages/SocialismCharacteristicsPage'
 import VietnamPracticePage from './pages/VietnamPracticePage'
 import QuizPage from './pages/QuizPage'
 import AIUsagePage from './pages/AIUsagePage'
+import VietNameSocialism from './pages/VietNameSocialism'
 
 function App() {
   const [activePage, setActivePage] = useState('home')
@@ -16,6 +17,8 @@ function App() {
         return <HomePage />
       case 'transition-stages':
         return <TransitionStagesPage />
+      case 'socialism-vietnam':
+        return <VietNameSocialism />
       case 'socialism-characteristics':
         return <SocialismCharacteristicsPage />
       case 'vietnam-practice':

@@ -166,62 +166,7 @@ const HomePage = () => {
                             </p>
                         </div>
                     </div>
-                </div>
-
-                {/* Current Evidence Section */}
-                <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8 mb-8 border border-green-200 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
-                    <h3 className="text-2xl font-bold mb-6 text-gray-800">Dẫn chứng hiện tại (2025)</h3>
-                    <p className="text-gray-600 mb-6">
-                        Những số liệu thống kê mới nhất phản ánh thành tựu của Việt Nam trong quá trình xây dựng CNXH.
-                    </p>
-                    <div className="grid md:grid-cols-3 gap-6">
-                        <div className="bg-white rounded-lg p-4 shadow-md">
-                            <h4 className="font-semibold text-green-700 mb-2">GDP Growth</h4>
-                            <div className="text-2xl font-bold text-green-600">5.05%</div>
-                            <p className="text-sm text-gray-600">Tăng trưởng GDP năm 2024</p>
-                        </div>
-                        <div className="bg-white rounded-lg p-4 shadow-md">
-                            <h4 className="font-semibold text-blue-700 mb-2">Poverty Rate</h4>
-                            <div className="text-2xl font-bold text-blue-600">2.23%</div>
-                            <p className="text-sm text-gray-600">Tỷ lệ nghèo đa chiều</p>
-                        </div>
-                        <div className="bg-white rounded-lg p-4 shadow-md">
-                            <h4 className="font-semibold text-purple-700 mb-2">HDI</h4>
-                            <div className="text-2xl font-bold text-purple-600">0.726</div>
-                            <p className="text-sm text-gray-600">Chỉ số phát triển con người</p>
-                        </div>
-                    </div>
-                    <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                        <p className="text-sm text-gray-700">
-                            <strong>Nguồn:</strong> Báo cáo của Tổng cục Thống kê, UNDP, Ngân hàng Thế giới (2024-2025)
-                        </p>
-                    </div>
-                </div>
-
-                {/* Website Structure */}
-                <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 mb-8 border border-indigo-200">
-                    <h3 className="text-2xl font-bold mb-6 text-gray-800">Cấu trúc website</h3>
-                    <div className="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <h4 className="font-semibold text-gray-800 mb-3">Nội dung chính:</h4>
-                            <ul className="space-y-2 text-gray-600">
-                                <li>• <strong>Giai đoạn quá độ:</strong> Timeline 4 giai đoạn từ 1945-nay</li>
-                                <li>• <strong>Đặc trưng CNXH:</strong> 6 đặc trưng bản chất cốt lõi</li>
-                                <li>• <strong>Thực tiễn Việt Nam:</strong> Thành tựu và thách thức</li>
-                                <li>• <strong>Quiz tương tác:</strong> 10 câu hỏi kiểm tra kiến thức</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="font-semibold text-gray-800 mb-3">Tính năng đặc biệt:</h4>
-                            <ul className="space-y-2 text-gray-600">
-                                <li>• <strong>AI Usage:</strong> Minh bạch về việc sử dụng AI</li>
-                                <li>• <strong>Responsive Design:</strong> Tương thích mọi thiết bị</li>
-                                <li>• <strong>Interactive Elements:</strong> Hover effects và animations</li>
-                                <li>• <strong>Modern UI/UX:</strong> Giao diện đẹp mắt, chuyên nghiệp</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                </div>  
 
                 {/* Learning Outcomes */}
                 <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
@@ -262,82 +207,6 @@ const HomePage = () => {
                     </div>
                 </div>
 
-                {/* Major Relevance */}
-                <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-8 mb-8 border border-purple-200">
-                    <h3 className="text-2xl font-bold mb-6 text-gray-800">💻 Liên kết với chuyên ngành Công nghệ thông tin</h3>
-                    <div className="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <h4 className="font-semibold text-gray-800 mb-3">Ứng dụng CNTT trong xây dựng CNXH:</h4>
-                            <ul className="space-y-2 text-gray-600">
-                                <li>• Chuyển đổi số trong quản lý nhà nước</li>
-                                <li>• Xây dựng chính phủ điện tử</li>
-                                <li>• Phát triển kinh tế số</li>
-                                <li>• Công nghệ 4.0 trong sản xuất</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="font-semibold text-gray-800 mb-3">Vai trò của sinh viên CNTT:</h4>
-                            <ul className="space-y-2 text-gray-600">
-                                <li>• Phát triển phần mềm phục vụ xã hội</li>
-                                <li>• Tạo ra các sản phẩm công nghệ hữu ích</li>
-                                <li>• Góp phần hiện đại hóa đất nước</li>
-                                <li>• Xây dựng nền tảng số cho tương lai</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Navigation Guide */}
-                <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl p-6">
-                    <h3 className="text-xl font-semibold mb-4 text-gray-800">Hướng dẫn điều hướng</h3>
-                    <p className="text-gray-600 mb-4">
-                        Sử dụng menu bên trái để khám phá các chủ đề chi tiết:
-                    </p>
-                    <div className="grid md:grid-cols-3 gap-4">
-                        <div className="flex items-center space-x-3">
-                            <span className="text-2xl">📈</span>
-                            <div>
-                                <div className="font-medium">Giai đoạn quá độ</div>
-                                <div className="text-sm text-gray-500">Tìm hiểu các giai đoạn phát triển</div>
-                            </div>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                            <span className="text-2xl">⭐</span>
-                            <div>
-                                <div className="font-medium">Đặc trưng CNXH</div>
-                                <div className="text-sm text-gray-500">Khám phá bản chất của CNXH</div>
-                            </div>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                            <span className="text-2xl">🇻🇳</span>
-                            <div>
-                                <div className="font-medium">Thực tiễn Việt Nam</div>
-                                <div className="text-sm text-gray-500">Liên hệ với thực tế Việt Nam</div>
-                            </div>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                            <span className="text-2xl">🧠</span>
-                            <div>
-                                <div className="font-medium">Quiz tương tác</div>
-                                <div className="text-sm text-gray-500">Kiểm tra kiến thức</div>
-                            </div>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                            <span className="text-2xl">🤖</span>
-                            <div>
-                                <div className="font-medium">AI Usage</div>
-                                <div className="text-sm text-gray-500">Minh bạch sử dụng AI</div>
-                            </div>
-                        </div>
-                        <div className="flex items-center space-x-3">
-                            <span className="text-2xl">🏠</span>
-                            <div>
-                                <div className="font-medium">Trang chủ</div>
-                                <div className="text-sm text-gray-500">Quay lại tổng quan</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     );
