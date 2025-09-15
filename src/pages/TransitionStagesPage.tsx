@@ -134,7 +134,7 @@ const TransitionStagesPage = () => {
 
                                 {/* Content Card */}
                                 <div
-                                    className="ml-8 flex-1 bg-white rounded-xl shadow-lg p-6Quá độ lên Chủ nghĩa Xã hội ở Việt Nam hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                    className="ml-8 flex-1 bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                                     <div className="flex items-center justify-between mb-4">
                                         <h3 className="text-2xl font-bold text-gray-800">{stage.title}</h3>
                                         <span
