@@ -105,7 +105,6 @@ const VietnamPracticePage = () => {
                                             Chính sách an sinh, xóa đói giảm nghèo, giáo dục, y tế, phát triển con người toàn diện được chú trọng → bảo đảm mục tiêu "dân giàu, nước mạnh, dân chủ, công bằng, văn minh".
                                         </p>
                                     </div>
-
                                     <div className="bg-emerald-50 p-4 rounded-lg border-l-4 border-emerald-400">
                                         <h5 className="font-bold text-emerald-800 mb-2">4. Nâng cao vị thế quốc tế</h5>
                                         <p className="text-emerald-700 text-sm">
@@ -117,7 +116,6 @@ const VietnamPracticePage = () => {
                         </div>
                     </div>
                 </div>
-
 
                 {/* Ví dụ thực tiễn gần đây */}
                 <div className="mb-12">
