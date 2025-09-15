@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import {useEffect, useState} from 'react';
 
 interface Question {
     id: number;
@@ -21,16 +21,16 @@ const QuizPage = () => {
         const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
         const oscillator = audioContext.createOscillator();
         const gainNode = audioContext.createGain();
-        
+
         oscillator.connect(gainNode);
         gainNode.connect(audioContext.destination);
-        
+
         oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime);
         oscillator.type = type;
-        
+
         gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
         gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration);
-        
+
         oscillator.start(audioContext.currentTime);
         oscillator.stop(audioContext.currentTime + duration);
     };
@@ -67,17 +67,17 @@ const QuizPage = () => {
     const playBackgroundMusic = () => {
         if (isPlaying) return;
         setIsPlaying(true);
-        
+
         const playMelody = () => {
             const melody = [261.63, 293.66, 329.63, 349.23, 392.00, 349.23, 329.63, 293.66]; // C4, D4, E4, F4, G4, F4, E4, D4
             melody.forEach((note, index) => {
                 setTimeout(() => createTone(note, 0.5), index * 800);
             });
         };
-        
+
         playMelody();
         const interval = setInterval(playMelody, 8000); // Lặp lại mỗi 8 giây
-        
+
         return () => clearInterval(interval);
     };
 
@@ -89,7 +89,7 @@ const QuizPage = () => {
             setTimeout(() => createTone(659.25, 0.2), 100); // E5
             setTimeout(() => createTone(783.99, 0.3), 200); // G5
         }, 500);
-        
+
         const cleanup = playBackgroundMusic();
         return cleanup;
     }, []);
@@ -272,15 +272,20 @@ const QuizPage = () => {
 
     if (quizCompleted) {
         return (
-            <div className="min-h-screen bg-gradient-to-br from-green-100 via-emerald-100 to-teal-100 relative overflow-hidden">
+            <div
+                className="min-h-screen bg-gradient-to-br from-green-100 via-emerald-100 to-teal-100 relative overflow-hidden">
                 {/* Decorative elements */}
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                    <div className="absolute top-20 left-10 w-32 h-32 bg-green-200 rounded-full opacity-20 animate-pulse"></div>
-                    <div className="absolute top-40 right-20 w-24 h-24 bg-emerald-200 rounded-full opacity-30 animate-bounce"></div>
-                    <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-teal-200 rounded-full opacity-25 animate-pulse"></div>
+                    <div
+                        className="absolute top-20 left-10 w-32 h-32 bg-green-200 rounded-full opacity-20 animate-pulse"></div>
+                    <div
+                        className="absolute top-40 right-20 w-24 h-24 bg-emerald-200 rounded-full opacity-30 animate-bounce"></div>
+                    <div
+                        className="absolute bottom-20 left-1/4 w-40 h-40 bg-teal-200 rounded-full opacity-25 animate-pulse"></div>
                 </div>
                 <div className="relative z-10 p-8 max-w-4xl mx-auto">
-                    <div className="bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl p-8 text-white text-center shadow-2xl transform hover:scale-105 transition-all duration-300 animate-bounce-in">
+                    <div
+                        className="bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl p-8 text-white text-center shadow-2xl transform hover:scale-105 transition-all duration-300 animate-bounce-in">
                         <h1 className="text-4xl font-bold mb-4">Kết quả Quiz</h1>
                         <div className="text-6xl mb-4">{score}/{questions.length}</div>
                         <p className="text-xl mb-6">{getScoreMessage()}</p>
@@ -297,19 +302,25 @@ const QuizPage = () => {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-100 to-indigo-100 relative overflow-hidden">
+        <div
+            className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-100 to-indigo-100 relative overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute top-20 left-10 w-32 h-32 bg-purple-200 rounded-full opacity-20 animate-pulse"></div>
-                <div className="absolute top-40 right-20 w-24 h-24 bg-pink-200 rounded-full opacity-30 animate-bounce"></div>
-                <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-indigo-200 rounded-full opacity-25 animate-pulse"></div>
-                <div className="absolute bottom-40 right-1/3 w-28 h-28 bg-purple-300 rounded-full opacity-20 animate-bounce"></div>
+                <div
+                    className="absolute top-20 left-10 w-32 h-32 bg-purple-200 rounded-full opacity-20 animate-pulse"></div>
+                <div
+                    className="absolute top-40 right-20 w-24 h-24 bg-pink-200 rounded-full opacity-30 animate-bounce"></div>
+                <div
+                    className="absolute bottom-20 left-1/4 w-40 h-40 bg-indigo-200 rounded-full opacity-25 animate-pulse"></div>
+                <div
+                    className="absolute bottom-40 right-1/3 w-28 h-28 bg-purple-300 rounded-full opacity-20 animate-bounce"></div>
             </div>
             <div className="relative z-10 p-8 max-w-4xl mx-auto">
                 {/* Header */}
-                <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white mb-8 shadow-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-down">
+                <div
+                    className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white mb-8 shadow-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-down">
                     <h1 className="text-4xl font-bold mb-4">
-                        📘 Bộ 10 Câu Hỏi Trắc Nghiệm 
+                        📘 Bộ 10 Câu Hỏi Trắc Nghiệm
                     </h1>
                     <p className="text-xl opacity-90">
                         Kiểm tra kiến thức về Quá độ lên CNXH ở Việt Nam
@@ -335,7 +346,7 @@ const QuizPage = () => {
                             <div className="w-32 bg-white/20 rounded-full h-2">
                                 <div
                                     className="bg-white h-2 rounded-full transition-all duration-300"
-                                    style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
+                                    style={{width: `${((currentQuestion + 1) / questions.length) * 100}%`}}
                                 ></div>
                             </div>
                         </div>
@@ -343,7 +354,9 @@ const QuizPage = () => {
                 </div>
 
                 {/* Question */}
-                <div className="bg-white rounded-xl shadow-lg p-8 mb-6 transform hover:scale-102 transition-all duration-300 hover:shadow-xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                <div
+                    className="bg-white rounded-xl shadow-lg p-8 mb-6 transform hover:scale-102 transition-all duration-300 hover:shadow-xl animate-fade-in-up"
+                    style={{animationDelay: '0.2s'}}>
                     <h2 className="text-2xl font-bold mb-6 text-gray-800">
                         {questions[currentQuestion].question}
                     </h2>
@@ -363,7 +376,7 @@ const QuizPage = () => {
                                     : showResult && index === questions[currentQuestion].correctAnswer
                                         ? 'bg-green-100 border-2 border-green-500 text-green-800 animate-pulse'
                                         : 'bg-gray-50 border-2 border-gray-200 hover:bg-gray-100 text-gray-700'
-                                    }`}
+                                }`}
                             >
                                 <span className="font-medium mr-3">
                                     {String.fromCharCode(65 + index)}.
@@ -405,7 +418,9 @@ const QuizPage = () => {
                 </div>
 
                 {/* Tips */}
-                <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-6 border border-yellow-200 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                <div
+                    className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-6 border border-yellow-200 animate-fade-in-up"
+                    style={{animationDelay: '0.3s'}}>
                     <h3 className="text-lg font-semibold text-gray-800 mb-3">💡 Mẹo học tập:</h3>
                     <ul className="space-y-2 text-gray-600">
                         <li>• <strong>Mức độ dễ:</strong> Nhận biết khái niệm cơ bản và giai đoạn lịch sử</li>

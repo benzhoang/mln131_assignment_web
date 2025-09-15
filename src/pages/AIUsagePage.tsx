@@ -119,16 +119,21 @@ const AIUsagePage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 relative overflow-hidden">
+        <div
+            className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 relative overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute top-20 left-10 w-32 h-32 bg-indigo-200 rounded-full opacity-20 animate-pulse"></div>
-                <div className="absolute top-40 right-20 w-24 h-24 bg-purple-200 rounded-full opacity-30 animate-bounce"></div>
-                <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-pink-200 rounded-full opacity-25 animate-pulse"></div>
+                <div
+                    className="absolute top-20 left-10 w-32 h-32 bg-indigo-200 rounded-full opacity-20 animate-pulse"></div>
+                <div
+                    className="absolute top-40 right-20 w-24 h-24 bg-purple-200 rounded-full opacity-30 animate-bounce"></div>
+                <div
+                    className="absolute bottom-20 left-1/4 w-40 h-40 bg-pink-200 rounded-full opacity-25 animate-pulse"></div>
             </div>
             <div className="relative z-10 p-8 max-w-6xl mx-auto">
                 {/* Header */}
-                <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white mb-8 shadow-2xl transform hover:scale-105 transition-all duration-300 animate-fade-in-up">
+                <div
+                    className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white mb-8 shadow-2xl transform hover:scale-105 transition-all duration-300 animate-fade-in-up">
                     <h1 className="text-4xl font-bold mb-4">
                         Minh bạch về sử dụng AI
                     </h1>
@@ -139,15 +144,19 @@ const AIUsagePage = () => {
 
                 {/* 4 Yếu tố đánh giá AI có trách nhiệm */}
                 <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-                    <h2 className="text-3xl font-bold mb-6 text-gray-800">Yếu tố đánh giá ứng dụng AI có trách nhiệm</h2>
+                    <h2 className="text-3xl font-bold mb-6 text-gray-800">Yếu tố đánh giá ứng dụng AI có trách
+                        nhiệm</h2>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div className="space-y-4">
                             <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                                 <h3 className="text-lg font-semibold text-green-800 mb-3">1. Minh bạch</h3>
                                 <ul className="space-y-2 text-green-700">
                                     <li>• <strong>Tên công cụ:</strong> NotebookLM, ChatGPT, Dify AI, Cursor AI</li>
-                                    <li>• <strong>Mục đích sử dụng:</strong> Tạo mind map, tóm tắt nội dung, phát triển website, xây dựng chatbot</li>
-                                    <li>• <strong>Prompt chính:</strong> Dựa vào prompt để sinh ra nội dung mong muốn</li>
+                                    <li>• <strong>Mục đích sử dụng:</strong> Tạo mind map, tóm tắt nội dung, phát triển
+                                        website, xây dựng chatbot
+                                    </li>
+                                    <li>• <strong>Prompt chính:</strong> Dựa vào prompt để sinh ra nội dung mong muốn
+                                    </li>
                                     <li>• <strong>Kết quả thô:</strong> Hiển thị output gốc từ AI</li>
                                     <li>• <strong>Phần chỉnh sửa:</strong> Chỉnh sửa nội dung theo ý muốn</li>
                                 </ul>
@@ -155,9 +164,15 @@ const AIUsagePage = () => {
                             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                                 <h3 className="text-lg font-semibold text-blue-800 mb-3">2. Trách nhiệm</h3>
                                 <ul className="space-y-2 text-blue-700">
-                                    <li>• <strong>Kiểm chứng thông tin:</strong> Đối chiếu với giáo trình và văn kiện chính thống</li>
-                                    <li>• <strong>Cam kết học thuật:</strong> AI chỉ hỗ trợ kỹ thuật, nội dung được biên soạn giáo trình chủ nghĩa xã hội khoa học không chuyên</li>
-                                    <li>• <strong>Nguồn tham khảo:</strong> Sử dụng tài liệu chính thức của giao trình chính thức biên soạn, thêm những tư liệu, báo tríí của Đảng và Nhà nước</li>
+                                    <li>• <strong>Kiểm chứng thông tin:</strong> Đối chiếu với giáo trình và văn kiện
+                                        chính thống
+                                    </li>
+                                    <li>• <strong>Cam kết học thuật:</strong> AI chỉ hỗ trợ kỹ thuật, nội dung được biên
+                                        soạn giáo trình chủ nghĩa xã hội khoa học không chuyên
+                                    </li>
+                                    <li>• <strong>Nguồn tham khảo:</strong> Sử dụng tài liệu chính thức của giao trình
+                                        chính thức biên soạn, thêm những tư liệu, báo tríí của Đảng và Nhà nước
+                                    </li>
                                     <li>• <strong>Đạo đức học thuật:</strong> Không copy-paste trực tiếp từ AI</li>
                                 </ul>
                             </div>
@@ -166,7 +181,9 @@ const AIUsagePage = () => {
                             <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
                                 <h3 className="text-lg font-semibold text-purple-800 mb-3">3. Sáng tạo</h3>
                                 <ul className="space-y-2 text-purple-700">
-                                    <li>• <strong>Thiết kế độc đáo:</strong> Website với UI/UX hiện đại, gradient backgrounds</li>
+                                    <li>• <strong>Thiết kế độc đáo:</strong> Website với UI/UX hiện đại, gradient
+                                        backgrounds
+                                    </li>
                                     <li>• <strong>Nội dung tương tác:</strong> Quiz, timeline tương tác</li>
                                     <li>• <strong>Ứng dụng đa dạng:</strong> Mind map, chatbot, responsive design</li>
                                     <li>• <strong>Kết hợp công nghệ:</strong> React + TypeScript + Tailwind CSS</li>
@@ -191,18 +208,45 @@ const AIUsagePage = () => {
                     <div className="space-y-8">
                         {aiTools.map((tool, index) => {
                             const colors = [
-                                { bg: 'from-blue-500 to-cyan-500', card: 'bg-gradient-to-br from-blue-50 to-cyan-50', border: 'border-blue-200', text: 'text-blue-800' },
-                                { bg: 'from-green-500 to-emerald-500', card: 'bg-gradient-to-br from-green-50 to-emerald-50', border: 'border-green-200', text: 'text-green-800' },
-                                { bg: 'from-purple-500 to-pink-500', card: 'bg-gradient-to-br from-purple-50 to-pink-50', border: 'border-purple-200', text: 'text-purple-800' },
-                                { bg: 'from-orange-500 to-red-500', card: 'bg-gradient-to-br from-orange-50 to-red-50', border: 'border-orange-200', text: 'text-orange-800' },
-                                { bg: 'from-indigo-500 to-purple-500', card: 'bg-gradient-to-br from-indigo-50 to-purple-50', border: 'border-indigo-200', text: 'text-indigo-800' }
+                                {
+                                    bg: 'from-blue-500 to-cyan-500',
+                                    card: 'bg-gradient-to-br from-blue-50 to-cyan-50',
+                                    border: 'border-blue-200',
+                                    text: 'text-blue-800'
+                                },
+                                {
+                                    bg: 'from-green-500 to-emerald-500',
+                                    card: 'bg-gradient-to-br from-green-50 to-emerald-50',
+                                    border: 'border-green-200',
+                                    text: 'text-green-800'
+                                },
+                                {
+                                    bg: 'from-purple-500 to-pink-500',
+                                    card: 'bg-gradient-to-br from-purple-50 to-pink-50',
+                                    border: 'border-purple-200',
+                                    text: 'text-purple-800'
+                                },
+                                {
+                                    bg: 'from-orange-500 to-red-500',
+                                    card: 'bg-gradient-to-br from-orange-50 to-red-50',
+                                    border: 'border-orange-200',
+                                    text: 'text-orange-800'
+                                },
+                                {
+                                    bg: 'from-indigo-500 to-purple-500',
+                                    card: 'bg-gradient-to-br from-indigo-50 to-purple-50',
+                                    border: 'border-indigo-200',
+                                    text: 'text-indigo-800'
+                                }
                             ];
                             const colorScheme = colors[index % colors.length];
-                            
+
                             return (
-                                <div key={index} className={`${colorScheme.card} ${colorScheme.border} border-2 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105`}>
+                                <div key={index}
+                                     className={`${colorScheme.card} ${colorScheme.border} border-2 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105`}>
                                     {/* Header với gradient */}
-                                    <div className={`bg-gradient-to-r ${colorScheme.bg} rounded-xl p-6 text-white mb-6`}>
+                                    <div
+                                        className={`bg-gradient-to-r ${colorScheme.bg} rounded-xl p-6 text-white mb-6`}>
                                         <h3 className="text-2xl font-bold mb-2">{tool.tool}</h3>
                                         <p className="text-lg opacity-90">{tool.purpose}</p>
                                     </div>
@@ -218,7 +262,7 @@ const AIUsagePage = () => {
                                                 </h4>
                                                 <p className="text-gray-600">{tool.usage}</p>
                                             </div>
-                                            
+
                                             <div className="bg-white rounded-lg p-4 shadow-sm">
                                                 <h4 className="font-semibold text-gray-800 mb-2 flex items-center">
                                                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
@@ -232,14 +276,15 @@ const AIUsagePage = () => {
 
                                         {/* Cột phải - Kết quả và chỉnh sửa */}
                                         <div className="space-y-6">
-                                            <div className="bg-yellow-50 rounded-lg p-4 shadow-sm border-l-4 border-yellow-400">
+                                            <div
+                                                className="bg-yellow-50 rounded-lg p-4 shadow-sm border-l-4 border-yellow-400">
                                                 <h4 className="font-semibold text-yellow-800 mb-2 flex items-center">
                                                     <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
                                                     Kết quả thô (Raw Output)
                                                 </h4>
                                                 <p className="text-yellow-700">{tool.rawOutput}</p>
                                             </div>
-                                            
+
                                             <div className="bg-white rounded-lg p-4 shadow-sm">
                                                 <h4 className="font-semibold text-gray-800 mb-2 flex items-center">
                                                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
@@ -247,7 +292,7 @@ const AIUsagePage = () => {
                                                 </h4>
                                                 <p className="text-gray-600">{tool.result}</p>
                                             </div>
-                                            
+
                                             <div className="bg-white rounded-lg p-4 shadow-sm">
                                                 <h4 className="font-semibold text-gray-800 mb-2 flex items-center">
                                                     <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
@@ -257,14 +302,16 @@ const AIUsagePage = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     {/* Hiển thị nguyên tắc sử dụng cho ChatGPT */}
                                     {tool.tool === "ChatGPT (GPT)" && tool.principles && (
                                         <div className="mt-8 border-t-2 border-gray-200 pt-8">
-                                            <h4 className="text-xl font-bold text-gray-800 mb-6 text-center">Nguyên tắc sử dụng ChatGPT</h4>
+                                            <h4 className="text-xl font-bold text-gray-800 mb-6 text-center">Nguyên tắc
+                                                sử dụng ChatGPT</h4>
                                             <div className="grid md:grid-cols-2 gap-6">
                                                 <div className="space-y-4">
-                                                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-6 shadow-sm">
+                                                    <div
+                                                        className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-6 shadow-sm">
                                                         <h5 className="text-lg font-bold text-green-800 mb-4 flex items-center">
                                                             <span className="text-2xl mr-2">✅</span>
                                                             Các bước sử dụng
@@ -272,7 +319,8 @@ const AIUsagePage = () => {
                                                         <ol className="space-y-3 text-green-700">
                                                             {tool.principles.steps.map((step, stepIndex) => (
                                                                 <li key={stepIndex} className="flex items-start">
-                                                                    <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">
+                                                                    <span
+                                                                        className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">
                                                                         {stepIndex + 1}
                                                                     </span>
                                                                     <span>{step}</span>
@@ -280,7 +328,8 @@ const AIUsagePage = () => {
                                                             ))}
                                                         </ol>
                                                     </div>
-                                                    <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-xl p-6 shadow-sm">
+                                                    <div
+                                                        className="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-xl p-6 shadow-sm">
                                                         <h5 className="text-lg font-bold text-blue-800 mb-4 flex items-center">
                                                             <span className="text-2xl mr-2">🎯</span>
                                                             Ứng dụng cụ thể
@@ -296,7 +345,8 @@ const AIUsagePage = () => {
                                                     </div>
                                                 </div>
                                                 <div className="space-y-4">
-                                                    <div className="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 rounded-xl p-6 shadow-sm">
+                                                    <div
+                                                        className="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 rounded-xl p-6 shadow-sm">
                                                         <h5 className="text-lg font-bold text-purple-800 mb-4 flex items-center">
                                                             <span className="text-2xl mr-2">⚖️</span>
                                                             Nguyên tắc đạo đức
@@ -310,14 +360,16 @@ const AIUsagePage = () => {
                                                             ))}
                                                         </ul>
                                                     </div>
-                                                    <div className="bg-gradient-to-br from-orange-50 to-red-50 border-2 border-orange-200 rounded-xl p-6 shadow-sm">
+                                                    <div
+                                                        className="bg-gradient-to-br from-orange-50 to-red-50 border-2 border-orange-200 rounded-xl p-6 shadow-sm">
                                                         <h5 className="text-lg font-bold text-orange-800 mb-4 flex items-center">
                                                             <span className="text-2xl mr-2">📝</span>
                                                             Ví dụ prompt
                                                         </h5>
                                                         <div className="space-y-3 text-orange-700">
                                                             {tool.principles.examples.map((example, exampleIndex) => (
-                                                                <div key={exampleIndex} className="bg-white p-4 rounded-lg border-l-4 border-orange-400 shadow-sm">
+                                                                <div key={exampleIndex}
+                                                                     className="bg-white p-4 rounded-lg border-l-4 border-orange-400 shadow-sm">
                                                                     <p className="font-semibold text-orange-800 mb-1">{example.type}</p>
                                                                     <p className="text-sm italic text-orange-600">"{example.prompt}"</p>
                                                                 </div>
@@ -340,7 +392,8 @@ const AIUsagePage = () => {
                     <h2 className="text-3xl font-bold mb-6 text-gray-800">Nguồn kiểm chứng thông tin</h2>
                     <div className="grid md:grid-cols-2 gap-6">
                         {verificationSources.map((source, index) => (
-                            <div key={index} className="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-6 border border-blue-200">
+                            <div key={index}
+                                 className="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-6 border border-blue-200">
                                 <h3 className="text-lg font-semibold text-gray-800 mb-3">{source.source}</h3>
                                 <div className="space-y-2">
                                     <div>
