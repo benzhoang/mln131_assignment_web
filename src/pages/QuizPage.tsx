@@ -18,123 +18,123 @@ const QuizPage = () => {
     const questions: Question[] = [
         {
             id: 1,
-            question: "Giai đoạn nào trong quá trình quá độ lên CNXH ở Việt Nam diễn ra từ 1945-1954?",
+            question: "Thời kỳ quá độ lên chủ nghĩa xã hội là giai đoạn:",
             options: [
-                "Giai đoạn khôi phục kinh tế",
-                "Giai đoạn cải tạo xã hội chủ nghĩa",
-                "Giai đoạn thống nhất và xây dựng",
-                "Giai đoạn đổi mới"
+                "Giữa chế độ phong kiến và tư bản chủ nghĩa",
+                "Chuyển tiếp từ tư bản chủ nghĩa lên xã hội chủ nghĩa",
+                "Giữa xã hội cộng sản nguyên thủy và chiếm hữu nô lệ",
+                "Giữa chủ nghĩa xã hội và chủ nghĩa cộng sản"
             ],
-            correctAnswer: 0,
-            explanation: "Giai đoạn 1945-1954 là giai đoạn khôi phục kinh tế sau chiến tranh, xây dựng cơ sở vật chất cho chế độ mới."
+            correctAnswer: 1,
+            explanation: "Thời kỳ quá độ lên chủ nghĩa xã hội là giai đoạn chuyển tiếp từ tư bản chủ nghĩa lên xã hội chủ nghĩa, đây là quá trình lịch sử tự nhiên theo quy luật phát triển của xã hội."
         },
         {
             id: 2,
-            question: "Đặc trưng bản chất nào của CNXH được thể hiện qua 'Chế độ sở hữu xã hội về tư liệu sản xuất'?",
+            question: "Việt Nam lựa chọn con đường quá độ lên CNXH bỏ qua chế độ tư bản chủ nghĩa vì:",
             options: [
-                "Nền kinh tế thị trường định hướng XHCN",
-                "Nhà nước pháp quyền xã hội chủ nghĩa",
-                "Chế độ sở hữu đa dạng với sở hữu xã hội chủ đạo",
-                "Văn hóa xã hội chủ nghĩa"
+                "Chủ nghĩa tư bản không tồn tại ở Việt Nam",
+                "Nguyện vọng của nhân dân và sự lãnh đạo của Đảng",
+                "Việt Nam có nền kinh tế phát triển cao từ trước",
+                "Do ảnh hưởng từ các nước xã hội chủ nghĩa"
             ],
-            correctAnswer: 2,
-            explanation: "Chế độ sở hữu xã hội về tư liệu sản xuất là đặc trưng cơ bản, thể hiện qua sở hữu đa dạng với sở hữu xã hội chủ đạo."
+            correctAnswer: 1,
+            explanation: "Việt Nam lựa chọn con đường quá độ lên CNXH bỏ qua chế độ tư bản chủ nghĩa dựa trên nguyện vọng của nhân dân và sự lãnh đạo sáng suốt của Đảng Cộng sản Việt Nam."
         },
         {
             id: 3,
-            question: "Thành tựu nào của Việt Nam trong quá trình xây dựng CNXH được đánh giá là ấn tượng nhất?",
+            question: "Đại hội nào của Đảng Cộng sản Việt Nam khởi xướng công cuộc Đổi mới, mở ra giai đoạn quá độ mới?",
             options: [
-                "Tăng trưởng kinh tế cao",
-                "Xóa đói giảm nghèo thành công",
-                "Phát triển giáo dục và y tế",
-                "Tất cả các ý trên"
+                "Đại hội IV (1976)",
+                "Đại hội VI (1986)",
+                "Đại hội VII (1991)",
+                "Đại hội XI (2011)"
             ],
-            correctAnswer: 3,
-            explanation: "Tất cả các thành tựu trên đều là những thành công ấn tượng của Việt Nam trong quá trình xây dựng CNXH."
+            correctAnswer: 1,
+            explanation: "Đại hội VI (1986) của Đảng Cộng sản Việt Nam đã khởi xướng công cuộc Đổi mới, mở ra giai đoạn quá độ mới với những đổi mới quan trọng về kinh tế và xã hội."
         },
         {
             id: 4,
-            question: "Nguyên tắc nào được coi là cơ bản trong quá trình quá độ lên CNXH?",
+            question: "Đặc trưng cơ bản của CNXH được khẳng định trong Cương lĩnh 2011 là:",
             options: [
-                "Nguyên tắc tập trung dân chủ",
-                "Nguyên tắc pháp quyền",
-                "Nguyên tắc công bằng xã hội",
-                "Tất cả các nguyên tắc trên"
+                "Kinh tế tập trung quan liêu bao cấp",
+                "Nhân dân lao động làm chủ, công bằng xã hội",
+                "Kinh tế thị trường tự do tư bản chủ nghĩa",
+                "Nhà nước đa đảng, tam quyền phân lập"
             ],
-            correctAnswer: 3,
-            explanation: "Tất cả các nguyên tắc trên đều là những nguyên tắc cơ bản trong quá trình quá độ lên CNXH."
+            correctAnswer: 1,
+            explanation: "Đặc trưng cơ bản của CNXH được khẳng định trong Cương lĩnh 2011 là nhân dân lao động làm chủ và công bằng xã hội, thể hiện bản chất dân chủ và tiến bộ của chế độ xã hội chủ nghĩa."
         },
         {
             id: 5,
-            question: "Mục tiêu của Việt Nam đến năm 2030 trong quá trình xây dựng CNXH là gì?",
+            question: "Đặc trưng 'Nhà nước pháp quyền XHCN của nhân dân, do nhân dân, vì nhân dân' có ý nghĩa là gì?",
             options: [
-                "Trở thành nước công nghiệp theo hướng hiện đại",
-                "Đạt thu nhập trung bình cao",
-                "Phát triển con người toàn diện",
-                "Tất cả các mục tiêu trên"
+                "Nhà nước tách rời xã hội",
+                "Nhà nước hoạt động theo pháp luật, phục vụ nhân dân",
+                "Nhà nước do cá nhân lãnh đạo tuyệt đối",
+                "Nhà nước tư sản kiểu mới"
             ],
-            correctAnswer: 3,
-            explanation: "Đến năm 2030, Việt Nam phấn đấu đạt tất cả các mục tiêu trên trong quá trình xây dựng CNXH."
+            correctAnswer: 1,
+            explanation: "Đặc trưng này có ý nghĩa là nhà nước hoạt động theo pháp luật và phục vụ nhân dân, thể hiện tính dân chủ và pháp quyền của nhà nước xã hội chủ nghĩa."
         },
         {
             id: 6,
-            question: "Giai đoạn đổi mới ở Việt Nam bắt đầu từ năm nào?",
+            question: "Giai đoạn 1976 – 1985 trong quá độ lên CNXH ở Việt Nam chủ yếu gặp khó khăn gì?",
             options: [
-                "1980",
-                "1986",
-                "1990",
-                "1995"
+                "Chưa giành được độc lập dân tộc",
+                "Mô hình kinh tế tập trung quan liêu bao cấp bộc lộ nhiều hạn chế",
+                "Chưa có sự lãnh đạo của Đảng Cộng sản",
+                "Việt Nam chưa gia nhập ASEAN"
             ],
             correctAnswer: 1,
-            explanation: "Giai đoạn đổi mới ở Việt Nam bắt đầu từ năm 1986 với Đại hội VI của Đảng Cộng sản Việt Nam."
+            explanation: "Giai đoạn 1976-1985, mô hình kinh tế tập trung quan liêu bao cấp bộc lộ nhiều hạn chế, dẫn đến khủng hoảng kinh tế-xã hội, tạo tiền đề cho công cuộc Đổi mới."
         },
         {
             id: 7,
-            question: "Đặc trưng nào của CNXH thể hiện qua 'Nhà nước pháp quyền xã hội chủ nghĩa'?",
+            question: "Thách thức lớn nhất của Việt Nam trong quá trình quá độ hiện nay là:",
             options: [
-                "Quyền lực nhà nước thuộc về nhân dân",
-                "Pháp luật là công cụ quản lý xã hội",
-                "Bảo đảm quyền con người, quyền công dân",
-                "Tất cả các ý trên"
+                "Phát triển văn hóa tiên tiến, đậm đà bản sắc dân tộc",
+                "Giữ vững vai trò lãnh đạo của Đảng",
+                "Kết hợp tăng trưởng kinh tế với công bằng xã hội",
+                "Quan hệ hữu nghị quốc tế"
             ],
-            correctAnswer: 3,
-            explanation: "Nhà nước pháp quyền xã hội chủ nghĩa bao gồm tất cả các đặc trưng trên, thể hiện tính dân chủ và pháp quyền."
+            correctAnswer: 2,
+            explanation: "Thách thức lớn nhất hiện nay là kết hợp tăng trưởng kinh tế với công bằng xã hội, đảm bảo phát triển bền vững và công bằng trong quá trình quá độ lên CNXH."
         },
         {
             id: 8,
-            question: "Thành tựu nào của Việt Nam trong xóa đói giảm nghèo được thế giới đánh giá cao?",
+            question: "Tại sao công cuộc Đổi mới 1986 được coi là bước ngoặt trong quá độ lên CNXH ở Việt Nam?",
             options: [
-                "Tỷ lệ nghèo giảm từ 60% xuống dưới 3%",
-                "Chương trình xóa đói giảm nghèo toàn diện",
-                "Phát triển cơ sở hạ tầng nông thôn",
-                "Tất cả các ý trên"
+                "Đưa Việt Nam thành nước công nghiệp phát triển",
+                "Xóa bỏ hoàn toàn kinh tế tư nhân",
+                "Chuyển sang mô hình kinh tế thị trường định hướng XHCN, giải quyết khủng hoảng kinh tế – xã hội",
+                "Thực hiện đa nguyên chính trị"
             ],
-            correctAnswer: 3,
-            explanation: "Việt Nam đã đạt được tất cả các thành tựu trên trong công cuộc xóa đói giảm nghèo, được thế giới công nhận."
+            correctAnswer: 2,
+            explanation: "Công cuộc Đổi mới 1986 là bước ngoặt vì đã chuyển sang mô hình kinh tế thị trường định hướng XHCN và giải quyết được khủng hoảng kinh tế-xã hội, mở ra thời kỳ phát triển mới."
         },
         {
             id: 9,
-            question: "Nguyên tắc 'Tập trung dân chủ' trong CNXH có nghĩa là gì?",
+            question: "Nếu không tiến hành Đổi mới 1986, con đường quá độ lên CNXH của Việt Nam có thể sẽ:",
             options: [
-                "Kết hợp tập trung với dân chủ trong tổ chức và hoạt động",
-                "Chỉ có tập trung mà không có dân chủ",
-                "Chỉ có dân chủ mà không có tập trung",
-                "Tập trung quyền lực vào một người"
+                "Phát triển nhanh hơn",
+                "Tiếp tục khủng hoảng, trì trệ, mất lòng tin của nhân dân",
+                "Gia nhập EU sớm hơn",
+                "Trở thành nước tư bản phát triển"
             ],
-            correctAnswer: 0,
-            explanation: "Nguyên tắc tập trung dân chủ là sự kết hợp hài hòa giữa tập trung và dân chủ trong tổ chức và hoạt động."
+            correctAnswer: 1,
+            explanation: "Nếu không có Đổi mới 1986, Việt Nam sẽ tiếp tục khủng hoảng, trì trệ và mất lòng tin của nhân dân, không thể phát triển được theo định hướng xã hội chủ nghĩa."
         },
         {
             id: 10,
-            question: "Mục tiêu của Việt Nam đến năm 2045 là gì?",
+            question: "Trong 8 đặc trưng của CNXH, đặc trưng nào được xem là khó đạt nhất hiện nay và vì sao?",
             options: [
-                "Trở thành nước phát triển, thu nhập cao",
-                "Hoàn thiện thể chế xã hội chủ nghĩa",
-                "Đạt được mục tiêu dân giàu, nước mạnh",
-                "Tất cả các mục tiêu trên"
+                "Nhân dân lao động làm chủ – do dân trí chưa cao",
+                "Nhà nước pháp quyền XHCN – do hệ thống luật pháp chưa hoàn thiện",
+                "Công bằng xã hội – do khoảng cách giàu nghèo và bất bình đẳng vùng miền",
+                "Quan hệ hữu nghị quốtế – do hội nhập toàn cầu"
             ],
-            correctAnswer: 3,
-            explanation: "Đến năm 2045, Việt Nam phấn đấu đạt tất cả các mục tiêu trên, trở thành nước phát triển theo định hướng xã hội chủ nghĩa."
+            correctAnswer: 2,
+            explanation: "Công bằng xã hội là đặc trưng khó đạt nhất hiện nay do khoảng cách giàu nghèo và bất bình đẳng vùng miền vẫn còn lớn, đòi hỏi nhiều nỗ lực và thời gian để giải quyết."
         }
     ];
 

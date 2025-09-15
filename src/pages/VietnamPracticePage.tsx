@@ -165,6 +165,217 @@ const VietnamPracticePage = () => {
                     </div>
                 </div>
 
+                {/* Recent Practical Examples Section */}
+                <div className="mb-12">
+                    <h2 className="text-3xl font-bold mb-8 text-gray-800">Ví dụ thực tiễn gần đây</h2>
+                    <div className="space-y-8">
+                        {/* Poverty Reduction */}
+                        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                            <div className="bg-gradient-to-r from-green-500 to-green-600 p-6 text-white">
+                                <div className="flex items-center mb-3">
+                                    <span className="text-4xl mr-4">📉</span>
+                                    <div>
+                                        <h3 className="text-2xl font-bold">Giảm nghèo bền vững, nghèo đa chiều</h3>
+                                        <p className="text-lg opacity-90">Thành tựu ấn tượng trong công cuộc xóa đói giảm nghèo</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="p-6">
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div className="space-y-4">
+                                        <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                                            <p className="text-gray-700 font-medium">
+                                                Việt Nam đã giảm tỷ lệ hộ nghèo đa chiều xuống còn khoảng <span className="font-bold text-green-600">1,93%</span> vào cuối năm 2024.
+                                            </p>
+                                            <div className="mt-3 flex flex-wrap gap-2">
+                                                <a href="https://tapchixaydung.vn" target="_blank" rel="noopener noreferrer"
+                                                    className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm hover:bg-green-200 transition-colors">
+                                                    tapchixaydung.vn
+                                                </a>
+                                                <a href="https://hcmcpv.org.vn" target="_blank" rel="noopener noreferrer"
+                                                    className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm hover:bg-green-200 transition-colors">
+                                                    hcmcpv.org.vn
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                                            <p className="text-gray-700">
+                                                Kết quả này vượt mục tiêu đặt ra trong Nghị quyết Đại hội XIII của Đảng và chương trình mục tiêu quốc gia giảm nghèo bền vững giai đoạn 2021-2025.
+                                            </p>
+                                            <div className="mt-3">
+                                                <a href="https://baolaocai.vn" target="_blank" rel="noopener noreferrer"
+                                                    className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm hover:bg-blue-200 transition-colors">
+                                                    Báo Lào Cai điện tử
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* GDP Growth */}
+                        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                            <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-6 text-white">
+                                <div className="flex items-center mb-3">
+                                    <span className="text-4xl mr-4">📈</span>
+                                    <div>
+                                        <h3 className="text-2xl font-bold">Tăng trưởng GDP, thu nhập người dân được cải thiện rõ rệt</h3>
+                                        <p className="text-lg opacity-90">Những con số ấn tượng về phát triển kinh tế</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="p-6">
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                                        <p className="text-gray-700 font-medium">
+                                            GDP bình quân đầu người đạt khoảng <span className="font-bold text-blue-600">4.700 USD</span> vào năm 2024.
+                                        </p>
+                                        <div className="mt-3">
+                                            <a href="https://tapchixaydung.vn" target="_blank" rel="noopener noreferrer"
+                                                className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm hover:bg-blue-200 transition-colors">
+                                                tapchixaydung.vn
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                                        <p className="text-gray-700 font-medium">
+                                            GDP năm 2024 khoảng <span className="font-bold text-purple-600">476,3 tỷ USD</span>.
+                                        </p>
+                                        <div className="mt-3">
+                                            <a href="https://mega.vietnamplus.vn" target="_blank" rel="noopener noreferrer"
+                                                className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm hover:bg-purple-200 transition-colors">
+                                                Báo mega.vietnamplus.vn
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Stable Growth */}
+                        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                            <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-6 text-white">
+                                <div className="flex items-center mb-3">
+                                    <span className="text-4xl mr-4">🔄</span>
+                                    <div>
+                                        <h3 className="text-2xl font-bold">Tăng trưởng ổn định và phục hồi sau đại dịch</h3>
+                                        <p className="text-lg opacity-90">Khả năng phục hồi mạnh mẽ sau COVID-19</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="p-6">
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                                        <p className="text-gray-700">
+                                            OECD đánh giá năm 2024 Việt Nam tăng trưởng GDP mạnh, phục hồi tốt sau đại dịch, xuất khẩu hàng hóa-dịch vụ tăng khoảng <span className="font-bold text-purple-600">15,5%</span> so với năm trước.
+                                        </p>
+                                        <div className="mt-3">
+                                            <a href="https://baodautu.vn" target="_blank" rel="noopener noreferrer"
+                                                className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm hover:bg-purple-200 transition-colors">
+                                                baodautu.vn
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+                                        <p className="text-gray-700">
+                                            Tỷ lệ thất nghiệp giảm xuống mức thấp lịch sử khoảng <span className="font-bold text-orange-600">2,2%</span> vào tháng 3/2025.
+                                        </p>
+                                        <div className="mt-3">
+                                            <a href="https://baodautu.vn" target="_blank" rel="noopener noreferrer"
+                                                className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm hover:bg-orange-200 transition-colors">
+                                                baodautu.vn
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Economic Restructuring */}
+                        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                            <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-6 text-white">
+                                <div className="flex items-center mb-3">
+                                    <span className="text-4xl mr-4">🏭</span>
+                                    <div>
+                                        <h3 className="text-2xl font-bold">Chuyển dịch cơ cấu kinh tế & nâng cao năng suất lao động</h3>
+                                        <p className="text-lg opacity-90">Chuyển đổi cơ cấu kinh tế theo hướng hiện đại</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="p-6">
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+                                        <p className="text-gray-700">
+                                            Các ngành công nghiệp và dịch vụ ngày càng chiếm tỷ trọng lớn hơn trong cơ cấu GDP, giảm phụ thuộc vào nông nghiệp.
+                                        </p>
+                                        <div className="mt-3">
+                                            <a href="https://mega.vietnamplus.vn" target="_blank" rel="noopener noreferrer"
+                                                className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm hover:bg-orange-200 transition-colors">
+                                                Báo mega.vietnamplus.vn
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div className="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-500">
+                                        <p className="text-gray-700">
+                                            Lao động chuyển từ các ngành nông nghiệp sang công nghiệp – xây dựng và dịch vụ; năng suất lao động được cải thiện rõ.
+                                        </p>
+                                        <div className="mt-3">
+                                            <a href="https://mega.vietnamplus.vn" target="_blank" rel="noopener noreferrer"
+                                                className="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm hover:bg-teal-200 transition-colors">
+                                                Báo mega.vietnamplus.vn
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* International Integration */}
+                        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                            <div className="bg-gradient-to-r from-teal-500 to-teal-600 p-6 text-white">
+                                <div className="flex items-center mb-3">
+                                    <span className="text-4xl mr-4">🌍</span>
+                                    <div>
+                                        <h3 className="text-2xl font-bold">Hội nhập quốc tế & phát triển xuất khẩu</h3>
+                                        <p className="text-lg opacity-90">Vị thế ngày càng cao trên trường quốc tế</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="p-6">
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div className="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-500">
+                                        <p className="text-gray-700">
+                                            Xuất nhập khẩu hàng hóa của Việt Nam đạt kim ngạch lớn, FDI vẫn thu hút mạnh.
+                                        </p>
+                                        <div className="mt-3 flex flex-wrap gap-2">
+                                            <a href="https://tapchixaydung.vn" target="_blank" rel="noopener noreferrer"
+                                                className="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm hover:bg-teal-200 transition-colors">
+                                                tapchixaydung.vn
+                                            </a>
+                                            <a href="https://mega.vietnamplus.vn" target="_blank" rel="noopener noreferrer"
+                                                className="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm hover:bg-teal-200 transition-colors">
+                                                Báo mega.vietnamplus.vn
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                                        <p className="text-gray-700">
+                                            Việt Nam được đánh giá cao là <span className="font-bold text-indigo-600">"điểm sáng"</span> trong giảm nghèo toàn cầu bất chấp ảnh hưởng của COVID-19 và suy thoái kinh tế thế giới.
+                                        </p>
+                                        <div className="mt-3">
+                                            <a href="https://baolaocai.vn" target="_blank" rel="noopener noreferrer"
+                                                className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm hover:bg-indigo-200 transition-colors">
+                                                Báo Lào Cai điện tử
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Challenges Section */}
                 <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
                     <h2 className="text-3xl font-bold mb-6 text-gray-800">Thách thức và giải pháp</h2>

@@ -100,51 +100,26 @@ const TransitionStagesPage = () => {
                     </p>
                 </div>
 
-                {/* Timeline */}
+                {/* Stages Grid */}
                 <div className="mb-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                    <h2 className="text-3xl font-bold mb-8 text-gray-800">Timeline các giai đoạn</h2>
-                    <div className="relative">
-                        {/* Timeline line */}
-                        <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-green-500 via-purple-500 to-orange-500 rounded-full animate-fade-in-up" style={{ animationDelay: '0.1s' }}></div>
-
+                    <h2 className="text-3xl font-bold mb-8 text-gray-800">Các giai đoạn phát triển</h2>
+                    <div className="grid md:grid-cols-2 gap-6">
                         {stages.map((stage, index) => (
-                            <div key={stage.id} className="relative flex items-start mb-8 animate-fade-in-up" style={{ animationDelay: `${0.3 + index * 0.2}s` }}>
-                                {/* Timeline dot */}
-                                <div className="absolute left-6 w-4 h-4 bg-white border-4 border-current rounded-full z-10 animate-bounce-in"
-                                    style={{
-                                        color: stage.color.includes('blue') ? '#3b82f6' :
-                                            stage.color.includes('green') ? '#10b981' :
-                                                stage.color.includes('purple') ? '#8b5cf6' : '#f97316',
-                                        animationDelay: `${0.4 + index * 0.2}s`
-                                    }}>
+                            <div key={stage.id} className="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-fade-in-up" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
+                                <div className="mb-4">
+                                    <h3 className="text-xl font-bold text-gray-800 mb-2">{stage.title}</h3>
+                                    <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                                        {stage.period}
+                                    </span>
                                 </div>
-
-                                {/* Content */}
-                                <div className="ml-16 bg-white rounded-xl shadow-lg p-6 border-l-4 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-fade-in-left"
-                                    style={{
-                                        borderLeftColor: stage.color.includes('blue') ? '#3b82f6' :
-                                            stage.color.includes('green') ? '#10b981' :
-                                                stage.color.includes('purple') ? '#8b5cf6' : '#f97316',
-                                        animationDelay: `${0.5 + index * 0.2}s`
-                                    }}>
-                                    <div className="flex items-center mb-3">
-                                        <span className="text-2xl mr-3">{stage.icon}</span>
-                                        <div>
-                                            <h3 className="text-xl font-bold text-gray-800">{stage.title}</h3>
-                                            <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
-                                                {stage.period}
-                                            </span>
+                                <p className="text-gray-600 mb-4">{stage.description}</p>
+                                <div className="space-y-2">
+                                    {stage.keyPoints.map((point, idx) => (
+                                        <div key={idx} className="flex items-start space-x-2">
+                                            <span className="text-blue-500 mt-1">•</span>
+                                            <span className="text-sm text-gray-600">{point}</span>
                                         </div>
-                                    </div>
-                                    <p className="text-gray-600 mb-4">{stage.description}</p>
-                                    <div className="grid md:grid-cols-2 gap-2">
-                                        {stage.keyPoints.map((point, idx) => (
-                                            <div key={idx} className="flex items-start space-x-2">
-                                                <span className="text-blue-500 mt-1">•</span>
-                                                <span className="text-sm text-gray-600">{point}</span>
-                                            </div>
-                                        ))}
-                                    </div>
+                                    ))}
                                 </div>
                             </div>
                         ))}

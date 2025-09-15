@@ -1,6 +1,22 @@
 const AIUsagePage = () => {
     const aiTools = [
         {
+            tool: "ChatGPT (GPT)",
+            purpose: "Hỗ trợ nghiên cứu và tạo nội dung học thuật",
+            usage: "Tóm tắt giáo trình, sinh câu hỏi quiz, hỗ trợ viết content và liên hệ thực tiễn",
+            prompt: "Tóm tắt Chương 3 MLN131 theo mindmap, làm rõ CQ3.1-CQ3.6",
+            result: "Nội dung tóm tắt có cấu trúc, câu hỏi quiz từ dễ đến khó, phân tích đặc trưng CNXH",
+            editing: "Sinh viên đối chiếu với giáo trình, bổ sung ví dụ thực tiễn, kiểm chứng thông tin"
+        },
+        {
+            tool: "Dify AI (Gemini 2.5 Pro)",
+            purpose: "Xây dựng chatbot hỗ trợ tự học và ôn tập",
+            usage: "Tạo chatbot trả lời câu hỏi liên quan đến môn học, tăng tính tương tác",
+            prompt: "Bạn là chuyên gia triết học Marxist-Leninist, chuyên nghiên cứu về chủ nghĩa xã hội và quá trình xây dựng chủ nghĩa xã hội tại Việt Nam. Trả lời ngắn gọn, chính xác, ưu tiên dựa trên nguồn tài liệu đã cung cấp.",
+            result: "Chatbot trả lời được hầu hết câu hỏi kiến thức cơ bản (khái niệm, định nghĩa, đặc điểm)",
+            editing: "Rà soát câu trả lời AI, chỉnh sửa cho sát phong cách học thuật, loại bỏ phần suy diễn không có trong tài liệu chính thống"
+        },
+        {
             tool: "Claude Sonnet 4 (Anthropic)",
             purpose: "Hỗ trợ thiết kế và phát triển website",
             usage: "Tạo code React, TypeScript, Tailwind CSS cho các component và page",
@@ -118,6 +134,56 @@ const AIUsagePage = () => {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+
+                {/* ChatGPT Usage Principles */}
+                <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+                    <h2 className="text-3xl font-bold mb-6 text-gray-800">Nguyên tắc sử dụng ChatGPT</h2>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        <div className="space-y-4">
+                            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                                <h3 className="text-lg font-semibold text-green-800 mb-3">✅ Các bước sử dụng</h3>
+                                <ol className="space-y-2 text-green-700">
+                                    <li><strong>Xác định yêu cầu:</strong> Từ bài tập (CQ3.1-CQ3.6), xác định nội dung cần thiết</li>
+                                    <li><strong>Sinh nội dung thô:</strong> ChatGPT cung cấp tóm tắt và giải thích</li>
+                                    <li><strong>Đối chiếu:</strong> So sánh với giáo trình MLN131 và văn kiện Đảng</li>
+                                    <li><strong>Biên tập:</strong> Chỉnh sửa, bổ sung ví dụ và cập nhật số liệu</li>
+                                </ol>
+                            </div>
+                            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                                <h3 className="text-lg font-semibold text-blue-800 mb-3">🎯 Ứng dụng cụ thể</h3>
+                                <ul className="space-y-2 text-blue-700">
+                                    <li>• Tóm tắt nhanh giáo trình để tạo outline báo cáo</li>
+                                    <li>• Sinh câu hỏi ôn tập/quiz tăng tương tác lớp học</li>
+                                    <li>• Hỗ trợ viết content: gợi ý cấu trúc, viết mở đầu/kết luận</li>
+                                    <li>• Liên hệ thực tiễn: phân tích đặc trưng CNXH với thành tựu Đổi mới</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="space-y-4">
+                            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                                <h3 className="text-lg font-semibold text-purple-800 mb-3">⚖️ Nguyên tắc đạo đức</h3>
+                                <ul className="space-y-2 text-purple-700">
+                                    <li><strong>AI chỉ hỗ trợ, không thay thế:</strong> Luôn kiểm chứng thông tin</li>
+                                    <li><strong>Minh bạch:</strong> Nêu rõ công cụ sử dụng, prompt và kết quả</li>
+                                    <li><strong>Sáng tạo:</strong> Biến nội dung lý thuyết thành infographic, quiz</li>
+                                </ul>
+                            </div>
+                            <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
+                                <h3 className="text-lg font-semibold text-orange-800 mb-3">📝 Ví dụ prompt</h3>
+                                <div className="space-y-3 text-orange-700">
+                                    <div className="bg-white p-3 rounded border-l-4 border-orange-400">
+                                        <p className="text-sm font-medium">Tóm tắt giáo trình:</p>
+                                        <p className="text-xs italic">"Tóm tắt Chương 3 MLN131 theo mindmap, làm rõ CQ3.1-CQ3.6"</p>
+                                    </div>
+                                    <div className="bg-white p-3 rounded border-l-4 border-orange-400">
+                                        <p className="text-sm font-medium">Quiz tương tác:</p>
+                                        <p className="text-xs italic">"Tạo câu hỏi từ dễ đến khó về 8 đặc trưng CNXH VN"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
