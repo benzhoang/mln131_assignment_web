@@ -13,9 +13,6 @@ const HomePage = () => {
                     <h1 className="text-4xl font-bold mb-4">
                         Quá độ lên Chủ nghĩa Xã hội ở Việt Nam
                     </h1>
-                    <p className="text-xl opacity-90 mb-4">
-                        Phân tích quá trình quá độ lên chủ nghĩa xã hội tại Việt Nam, đặc biệt trong việc xây dựng nền kinh tế xã hội chủ nghĩa
-                    </p>
                     <p className="text-lg opacity-80 mb-6">
                         Website này cung cấp cái nhìn toàn diện về lý luận và thực tiễn quá độ lên CNXH ở Việt Nam, từ các giai đoạn lịch sử đến những thành tựu hiện tại và triển vọng tương lai.
                     </p>
@@ -28,46 +25,6 @@ const HomePage = () => {
                         </span>
                     </div>
                 </div>
-
-                {/* Introduction Cards */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                    <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-primary-500 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-                        <h3 className="text-xl font-semibold mb-3 text-gray-800">Mục tiêu nghiên cứu</h3>
-                        <p className="text-gray-600 mb-3">
-                            Phân tích quá trình quá độ lên chủ nghĩa xã hội tại Việt Nam, có ý nghĩa quan trọng cả về lý luận và thực tiễn đối với sự phát triển kinh tế - xã hội.
-                        </p>
-                        <ul className="text-sm text-gray-500 space-y-1">
-                            <li>• Hiểu rõ các giai đoạn phát triển lịch sử</li>
-                            <li>• Nắm vững đặc trưng bản chất của CNXH</li>
-                            <li>• Liên hệ với thực tiễn Việt Nam</li>
-                        </ul>
-                    </div>
-
-                    <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-secondary-500 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                        <h3 className="text-xl font-semibold mb-3 text-gray-800">Nội dung chính</h3>
-                        <p className="text-gray-600 mb-3">
-                            Trình bày các giai đoạn quá độ lên chủ nghĩa xã hội và các đặc trưng bản chất của chủ nghĩa xã hội, liên hệ với thực tiễn ở Việt Nam.
-                        </p>
-                        <ul className="text-sm text-gray-500 space-y-1">
-                            <li>• 4 giai đoạn quá độ chính (1945-nay)</li>
-                            <li>• 6 đặc trưng bản chất của CNXH</li>
-                            <li>• Thành tựu và thách thức thực tiễn</li>
-                        </ul>
-                    </div>
-
-                    <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-500 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                        <h3 className="text-xl font-semibold mb-3 text-gray-800">Thực tiễn Việt Nam</h3>
-                        <p className="text-gray-600 mb-3">
-                            Xây dựng nền kinh tế xã hội chủ nghĩa phù hợp với điều kiện và hoàn cảnh cụ thể của Việt Nam.
-                        </p>
-                        <ul className="text-sm text-gray-500 space-y-1">
-                            <li>• Mô hình kinh tế thị trường định hướng XHCN</li>
-                            <li>• Thành tựu xóa đói giảm nghèo</li>
-                            <li>• Hội nhập quốc tế và phát triển bền vững</li>
-                        </ul>
-                    </div>
-                </div>
-
                 {/* Importance Section */}
                 <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-8 mb-8 border border-yellow-200 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                     <h2 className="text-2xl font-bold mb-6 text-gray-800">Tầm quan trọng của chủ đề</h2>
