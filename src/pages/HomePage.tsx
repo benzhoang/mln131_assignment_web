@@ -1,16 +1,15 @@
+import bgImage from "../assets/Photo 1.jpg";
+
 const HomePage = () => {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 relative overflow-hidden">
+        <div className="min-h-screen w-full bg-cover bg-center relative"
+        style={{backgroundImage: `url(${bgImage})`, backgroundRepeat: "no-repeat"}}
+        >
             {/* Decorative elements */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200 rounded-full opacity-20 animate-pulse"></div>
-                <div className="absolute top-40 right-20 w-24 h-24 bg-purple-200 rounded-full opacity-30 animate-bounce"></div>
-                <div className="absolute bottom-20 left-1/4 w-40 h-40 bg-indigo-200 rounded-full opacity-25 animate-pulse"></div>
-                <div className="absolute bottom-40 right-1/3 w-28 h-28 bg-blue-300 rounded-full opacity-20 animate-bounce"></div>
-            </div>
+            <div className="absolute inset-0 bg-black/30"></div>
             <div className="relative z-10 p-8 max-w-6xl mx-auto">
                 {/* Hero Section */}
-                <div className="bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl p-8 text-black mb-8 shadow-2xl transform hover:scale-105 transition-all duration-300 animate-fade-in-up">
+                <div className="bg-white from-primary-600 to-secondary-600 rounded-2xl p-8 text-black mb-8 shadow-2xl transform hover:scale-105 transition-all duration-300 animate-fade-in-up">
                     <h1 className="text-4xl font-bold mb-4">
                         Quá độ lên Chủ nghĩa Xã hội ở Việt Nam
                     </h1>
