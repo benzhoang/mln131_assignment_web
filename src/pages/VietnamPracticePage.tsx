@@ -160,13 +160,9 @@ const VietnamPracticePage = () => {
                                                 </p>
                                             </div>
                                             <div className="flex flex-wrap gap-2">
-                                                <a href="https://www.tapchicongsan.org.vn" target="_blank" rel="noopener noreferrer" 
+                                                <a href="https://molisa.gov.vn/baiviet/242819" target="_blank" rel="noopener noreferrer"
                                                    className="bg-red-100 hover:bg-red-200 text-red-800 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200">
-                                                    Tạp chí Cộng sản
-                                                </a>
-                                                <a href="https://hcmcpv.org.vn" target="_blank" rel="noopener noreferrer" 
-                                                   className="bg-red-100 hover:bg-red-200 text-red-800 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200">
-                                                    HCMCPV
+                                                    Bộ lao động - Thương binh & Xã hội
                                                 </a>
                                             </div>
                                         </div>
@@ -189,13 +185,13 @@ const VietnamPracticePage = () => {
                                                 </div>
                                             </div>
                                             <div className="flex flex-wrap gap-2">
-                                                <a href="https://www.tapchicongsan.org.vn" target="_blank" rel="noopener noreferrer" 
+                                                <a href="https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2025/01/thong-cao-bao-chi-tinh-hinh-kinh-te-xa-hoi-quy-iv-va-nam-2024/" target="_blank" rel="noopener noreferrer"
                                                    className="bg-green-100 hover:bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200">
-                                                    Tạp chí Cộng sản
+                                                    CƠ QUAN THỐNG KÊ QUỐC GIA CỤC THỐNG KÊ - BỘ TÀI CHÍNH
                                                 </a>
-                                                <a href="https://vietnamplus.vn" target="_blank" rel="noopener noreferrer" 
+                                                <a href="https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/tai-chinh/78773/gdp-viet-nam-nam-2024-dat-476-3-ty-usd-dung-thu-33-the-gioi" target="_blank" rel="noopener noreferrer"
                                                    className="bg-green-100 hover:bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200">
-                                                    VietnamPlus
+                                                    Chính Sách Pháp Luật mới (GDP Việt Nam năm 2024 )
                                                 </a>
                                             </div>
                                         </div>
@@ -206,25 +202,37 @@ const VietnamPracticePage = () => {
                                 <div className="bg-white rounded-xl shadow-lg p-6 mb-6 hover:shadow-xl transition-all duration-300">
                                     <div className="flex items-start space-x-4">
                                         <div className="flex-1">
-                                            <h4 className="text-xl font-bold text-gray-800 mb-3">Tăng trưởng ổn định và phục hồi sau đại dịch</h4>
+                                            <h4 className="text-xl font-bold text-gray-800 mb-3">Tăng trưởng ổn định và
+                                                phục hồi sau đại dịch</h4>
                                             <div className="grid md:grid-cols-2 gap-4 mb-4">
                                                 <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
-                                                    <p className="text-blue-800 font-semibold mb-2">Xuất khẩu hàng hóa-dịch vụ</p>
-                                                    <p className="text-blue-700 text-lg font-bold">Tăng 15,5% (2024)</p>
+                                                    <p className="text-blue-800 font-semibold mb-2">Xuất khẩu hàng
+                                                        hóa-dịch vụ</p>
+                                                    <p className="text-blue-700 text-lg font-bold">Tăng 15,4% (2024)</p>
                                                 </div>
                                                 <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
-                                                    <p className="text-blue-800 font-semibold mb-2">Tỷ lệ thất nghiệp</p>
+                                                    <p className="text-blue-800 font-semibold mb-2">Tỷ lệ thất
+                                                        nghiệp</p>
                                                     <p className="text-blue-700 text-lg font-bold">2,2% (3/2025)</p>
                                                 </div>
                                             </div>
                                             <p className="text-gray-700 text-sm mb-4">
-                                                OECD đánh giá năm 2024 Việt Nam tăng trưởng GDP mạnh, phục hồi tốt sau đại dịch, 
+                                                OECD đánh giá năm 2024 Việt Nam tăng trưởng GDP mạnh, phục hồi tốt sau
+                                                đại dịch,
                                                 tỷ lệ thất nghiệp giảm xuống mức thấp lịch sử.
                                             </p>
                                             <div className="flex flex-wrap gap-2">
-                                                <a href="https://baodautu.vn" target="_blank" rel="noopener noreferrer" 
+                                                <a href="https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2025/01/buc-tranh-xuat-nhap-khau-hang-hoa-cua-viet-nam-nam-2024-phuc-hoi-phat-trien-va-nhung-ky-luc-moi/"
+                                                   target="_blank" rel="noopener noreferrer"
                                                    className="bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200">
-                                                    Báo Đầu tư
+                                                    Xuất khẩu hàng hóa-dịch vụ
+                                                </a>
+                                            </div>
+                                            <div className="flex flex-wrap gap-2 mt-2">
+                                                <a href=" https://www.nso.gov.vn/du-lieu-va-so-lieu-thong-ke/2025/07/thong-cao-bao-chi-ve-tinh-hinh-lao-dong-viec-lam-quy-ii-va-6-thang-dau-nam-2025/#:~:text=T%E1%BB%B7%20l%E1%BB%87%20th%E1%BA%A5t%20nghi%E1%BB%87p%20trong%20%C4%91%E1%BB%99%20tu%E1%BB%95i%20lao%20%C4%91%E1%BB%99ng%20s%C3%A1u,0%2C18%20%C4%91i%E1%BB%83m%20ph%E1%BA%A7n%20tr%C4%83m."
+                                                   target="_blank" rel="noopener noreferrer"
+                                                   className="bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200">
+                                                    Tỷ lệ thất nghiệp
                                                 </a>
                                             </div>
                                         </div>
@@ -232,12 +240,15 @@ const VietnamPracticePage = () => {
                                 </div>
 
                                 {/* Chuyển dịch cơ cấu kinh tế */}
-                                <div className="bg-white rounded-xl shadow-lg p-6 mb-6 hover:shadow-xl transition-all duration-300">
+                                <div
+                                    className="bg-white rounded-xl shadow-lg p-6 mb-6 hover:shadow-xl transition-all duration-300">
                                     <div className="flex items-start space-x-4">
                                         <div className="flex-1">
-                                            <h4 className="text-xl font-bold text-gray-800 mb-3">Chuyển dịch cơ cấu kinh tế & nâng cao năng suất lao động</h4>
-                                            <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-400 mb-4">
-                                                <p className="text-purple-800 font-semibold mb-2">Cơ cấu kinh tế hiện đại</p>
+                                            <h4 className="text-xl font-bold text-gray-800 mb-3">Chuyển dịch cơ cấu kinh
+                                                tế & nâng cao năng suất lao động</h4>
+                                            <div
+                                                className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-400 mb-4">
+                                            <p className="text-purple-800 font-semibold mb-2">Cơ cấu kinh tế hiện đại</p>
                                                 <p className="text-purple-700 text-sm mb-2">
                                                     Các ngành công nghiệp và dịch vụ ngày càng chiếm tỷ trọng lớn hơn trong cơ cấu GDP, 
                                                     giảm phụ thuộc vào nông nghiệp.
@@ -248,9 +259,9 @@ const VietnamPracticePage = () => {
                                                 </p>
                                             </div>
                                             <div className="flex flex-wrap gap-2">
-                                                <a href="https://vietnamplus.vn" target="_blank" rel="noopener noreferrer" 
+                                                <a href="https://xaydungchinhsach.chinhphu.vn/chuyen-dich-co-cau-kinh-te-va-nang-cao-chat-luong-tang-truong-chia-khoa-cho-thinh-vuong-quoc-gia-119250901191451405.htm" target="_blank" rel="noopener noreferrer"
                                                    className="bg-purple-100 hover:bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200">
-                                                    VietnamPlus
+                                                    Xây dựng chính sách, pháp luật
                                                 </a>
                                             </div>
                                         </div>
@@ -272,17 +283,13 @@ const VietnamPracticePage = () => {
                                                 </p>
                                             </div>
                                             <div className="flex flex-wrap gap-2">
-                                                <a href="https://www.tapchicongsan.org.vn" target="_blank" rel="noopener noreferrer" 
+                                                <a href="https://tapchicongsan.org.vn/web/guest/quan-triet-va-thuc-hien-nghi-quyet-dai-hoi-xiii-cua-dang/-/2018/825344/view_content" target="_blank" rel="noopener noreferrer"
                                                    className="bg-orange-100 hover:bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200">
                                                     Tạp chí Cộng sản
                                                 </a>
-                                                <a href="https://vietnamplus.vn" target="_blank" rel="noopener noreferrer" 
+                                                <a href="https://tapchicongsan.org.vn/web/guest/quan-triet-va-thuc-hien-nghi-quyet-dai-hoi-xiii-cua-dang/-/2018/825344/view_content" target="_blank" rel="noopener noreferrer"
                                                    className="bg-orange-100 hover:bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200">
-                                                    VietnamPlus
-                                                </a>
-                                                <a href="https://laocai.gov.vn" target="_blank" rel="noopener noreferrer" 
-                                                   className="bg-orange-100 hover:bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200">
-                                                    Báo Lào Cai
+                                                    Một số giải pháp thúc đẩy xuất khẩu hàng hóa của Việt Nam đến năm 2030
                                                 </a>
                                             </div>
                                         </div>
@@ -300,11 +307,6 @@ const VietnamPracticePage = () => {
                                                     <p className="text-indigo-700 text-lg font-bold">77% mức độ 4</p>
                                                     <p className="text-indigo-600 text-sm">(2024)</p>
                                                 </div>
-                                                <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-400">
-                                                    <p className="text-indigo-800 font-semibold mb-2">Tài khoản VNeID</p>
-                                                    <p className="text-indigo-700 text-lg font-bold">50 triệu</p>
-                                                    <p className="text-indigo-600 text-sm">(cuối 2024)</p>
-                                                </div>
                                             </div>
                                             <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-400 mb-4">
                                                 <p className="text-indigo-800 font-semibold mb-2">Kinh tế số</p>
@@ -314,17 +316,13 @@ const VietnamPracticePage = () => {
                                                 </p>
                                             </div>
                                             <div className="flex flex-wrap gap-2">
-                                                <a href="https://chinhphu.vn" target="_blank" rel="noopener noreferrer" 
+                                                <a href="https://www.tapchicongsan.org.vn/web/guest/kinh-te/-/2018/1044702/tong-quan-ve-chuyen-doi-so-viet-nam.aspx" target="_blank" rel="noopener noreferrer"
                                                    className="bg-indigo-100 hover:bg-indigo-200 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200">
-                                                    Báo Chính phủ
+                                                    Kinh tế số
                                                 </a>
-                                                <a href="https://nhandan.vn" target="_blank" rel="noopener noreferrer" 
+                                                <a href="https://vietnamnet.vn/dua-ty-le-dan-so-truong-thanh-dung-dich-vu-cong-truc-tuyen-len-40-2307671.html#:~:text=M%E1%BB%A5c%20ti%C3%AAu%20h%C6%B0%E1%BB%9Bng%20t%E1%BB%9Bi%20l%C3%A0,95%25%20v%E1%BB%9Bi%20c%C3%A1c%20%C4%91%E1%BB%8Ba%20ph%C6%B0%C6%A1ng." target="_blank" rel="noopener noreferrer"
                                                    className="bg-indigo-100 hover:bg-indigo-200 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200">
-                                                    Nhân Dân
-                                                </a>
-                                                <a href="https://vietnamplus.vn" target="_blank" rel="noopener noreferrer" 
-                                                   className="bg-indigo-100 hover:bg-indigo-200 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium transition-colors duration-200">
-                                                    VietnamPlus
+                                                    DVCTT
                                                 </a>
                                             </div>
                                         </div>
